@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Ben 10 Universe Dashboard | Classic, Alien Force, Ultimate Alien, Omniverse & Reboot</title>
+
+    <meta name="description"
+        content="Enter the Ben 10 Universe dashboard and explore every series including Classic (2005), Alien Force, Ultimate Alien, Omniverse, and the 2016 Reboot. Navigate through the full Omnitrix saga.">
+
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="logoben10.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/ben10-universe">
+
+    <meta property="og:title"
+        content="Ben 10 Universe Dashboard | Explore Every Series of the Omnitrix Saga">
+
+    <meta property="og:description"
+        content="Navigate the entire Ben 10 universe from one hub. Access Classic (2005), Alien Force, Ultimate Alien, Omniverse and the Reboot continuity.">
+
+    <meta property="og:image" content="https://yourwebsite.com/universe-preview.png">
+
+    <meta property="og:site_name" content="Ben 10 Universe">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="relative">
+
+    <!-- Background video -->
+    <video autoplay loop muted class="fixed inset-0w-full h-full object-cover -z-10">
+        <source src="Video/bg-cosmic-green-particle.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Background Music -->
+    <audio id="bgMusic" src="Audio/benpageloadingsound.mp3"></audio>
+
+    <!-- Main Heading -->
+    <header class="flex items-center justify-center">
+        <h1 class="text-7xl font-bold font-mono text-white m-12">
+            BEN 10 UNIVERSE
+        </h1>
+
+        <nav class="absolute top-4 right-4">
+            <button
+                class="border border-white text-green-300 px-5 py-1.5 rounded-full hover:text-white transition">
+                <a href="index.html" target="_self">Back to Home</a>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Classic Continuity -->
+    <section class="py-16 text-center">
+        <h2 class="text-3xl font-semibold text-white mb-10 z-10 font-mono ">
+            Classic Continuity
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-6 px-6">
+
+            <a href="classic2005.html"
+                class="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full font-semibold shadow-lg transition transform hover:scale-110 hover:opacity-0 hover:animate-pulse">
+                Classic (2005)
+            </a>
+
+            <a href="alienforce.html"
+                class="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full font-semibold shadow-lg transition transform hover:scale-110 hover:opacity-0 hover:animate-pulse">
+                Alien Force
+            </a>
+
+            <a href="ultimatealien.html"
+                class="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full font-semibold shadow-lg transition transform hover:scale-110 hover:opacity-0 hover:animate-pulse">
+                Ultimate Alien
+            </a>
+
+            <a href="omniverse.html"
+                class="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full font-semibold shadow-lg transition transform hover:scale-110 hover:opacity-0 hover:animate-pulse">
+                Omniverse
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Reboot Continuity -->
+    <section class="py-16 text-center">
+        <h2 class="text-3xl font-semibold text-white mb-10 z-10 font-mono">
+            Reboot Continuity
+        </h2>
+
+        <div class="flex justify-center">
+
+            <a href="index2.html"
+                class="px-8 py-3 bg-lime-500 hover:bg-lime-600 text-black rounded-full font-bold shadow-lg transition transform hover:scale-110 hover:opacity-0 hover:animate-pulse">
+                Reboot (2016)
+            </a>
+
+        </div>
+    </section>
+
+    <script>
+        window.onload = () => document.getElementById("bgMusic").play();
+        document.getElementById("musicLink").onclick = () => document.getElementById("bgMusic").play();
+    </script>
+</body>
+
+</html>
