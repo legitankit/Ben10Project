@@ -11,10 +11,19 @@
   <meta name="description"
     content="Learn about the Ben 10 universe, its history, core characters like Ben Tennyson, Gwen, Kevin, Grandpa Max, and the origin of the Omnitrix. Explore the legacy of this iconic animated franchise.">
   <meta name="robots" content="index, follow">
-  <link rel="icon" href="logoben10.png">
+  <link rel="icon" href="Image/logoben10.png">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+  <!-- GOOGLE FONTS -->
+  <!-- use like :  [font-family:'Orbiton'] as class -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Audiowide&family=Bangers&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barrio&family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Black+Ops+One&family=Creepster&family=Diplomata&family=Fontdiner+Swanky&family=Freckle+Face&family=Goldman:wght@400;700&family=Gruppo&family=Keania+One&family=Luckiest+Guy&family=Matemasie&family=Monoton&family=Nosifer&family=Orbitron:wght@400..900&family=Pacifico&family=Plaster&family=Poiret+One&family=Press+Start+2P&family=Protest+Guerrilla&family=Quicksand:wght@300..700&family=Righteous&family=Rubik+Wet+Paint&family=Shojumaru&family=Sixtyfour&family=UnifrakturCook:wght@700&family=Wallpoet&display=swap"
+    rel="stylesheet">
+
+  <!-- JSON-LD -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -91,7 +100,9 @@
   <audio id="bgMusic" src="Audio/omnitrix.mp3"></audio>
 </head>
 
-<body class="min-h-screen bg-black">
+<!-- BODY -->
+
+<body class="min-h-screen bg-black selection:bg-lime-300/40 selection:text-lime-400">
 
   <header class="absolute top-0 left-0 w-full z-30">
 
@@ -106,7 +117,7 @@
             border border-lime-400/40
             px-5 py-1.5 rounded-full
             hover:text-white
-            transition">
+            transition [font-family:'Goldman']">
       Back to Home
     </a>
 
@@ -128,20 +139,23 @@
       <img src="Image/aboutbg13.jpg" class="w-full h-full object-cover opacity-25">
 
       <!-- Center Title -->
-      <h1 class="absolute z-10 top-20 left-1/2 -translate-x-1/2 text-6xl font-black
-           text-lime-400
-           tracking-widest
+      <audio id="hoverSong" src="Audio/ben_10_english_og-classic.mp3" loop></audio>
+
+      <h1 class="absolute z-10 top-20 left-1/2 -translate-x-1/2 text-5xl 
+           text-lime-400 tracking-widest
            drop-shadow-[0_0_8px_#84cc16]
            hover:tracking-[0.4em]
            hover:text-white
            hover:drop-shadow-[0_0_25px_#84cc16]
-           transition-all duration-500">
+           transition-all duration-500 [font-family:Nosifer]"
+        onmouseenter="document.getElementById('hoverSong').play()"
+        onmouseleave="document.getElementById('hoverSong').pause(); document.getElementById('hoverSong').currentTime = 0;">
         BEN 10
       </h1>
 
       <div
-        class="absolute h-full w-full text-white text-center flex flex-col items-center justify-center text-xl p-10 ">
-        <p class="p-20 scale-y-150 ">
+        class=" absolute h-full w-full text-white text-center flex flex-col items-center justify-center text-xl p-10 ">
+        <p class=" p-20 scale-y-150 ">
           Ben 10 is an American science fiction superhero media franchise conceived by Man of Action and owned by The
           Cartoon Network, Inc. division of Warner Bros. Discovery. The franchise, mainly consisting of animated series
           produced by Cartoon Network Studios, revolves around a young boy named Ben Tennyson, who discovers the
@@ -149,15 +163,41 @@
           — a high-tech, extraterrestrial device shaped like a wristwatch.
         </p>
 
-        <p class="scale-y-150">This remarkable gadget contains the DNA of
+        <p class=" scale-y-150">This remarkable gadget contains the DNA of
           various alien species, allowing Ben to transform into them at will. Initially, the Omnitrix features ten alien
           transformations, but over time, Ben gains the ability to unlock additional species. </p>
 
-        <a href="#history" class="w-72 h-20 mt-20 rounded-full flex items-center justify-center 
-              text-2xl font-normal text-white bg-transparent border border-lime-600 hover:text-white hover:drop-shadow-[0_0_10px_lime]
-              transition duration-300 transform hover:scale-105">
-          Know the History &nbsp; <iconify-icon icon="material-symbols:arrow-drop-down-circle"></iconify-icon>
+        <!-- Know the History -->
+        <a href="#history" class="group w-72 h-20 mt-20 rounded-full flex items-center justify-center 
+        text-2xl font-normal border border-lime-600 hover:drop-shadow-[0_0_10px_lime]
+        transform hover:scale-105 transition duration-300">
+
+          <span class="text-lime-300 mr-1">Know the</span>
+
+          <!-- HISTORY TEXT -->
+          <span class="relative text-white">
+
+            <!-- Animated fill -->
+            <span class="absolute inset-0 
+                     bg-gradient-to-r from-lime-300 to-lime-300
+                     bg-[length:0%_100%] bg-left bg-no-repeat
+                     bg-clip-text text-transparent
+                     transition-all duration-500 ease-in-out
+                     group-hover:bg-[length:100%_100%]">
+              History
+            </span>
+
+            History
+          </span>
+
+          &nbsp;
+
+          <!-- ICON -->
+          <iconify-icon icon="material-symbols:arrow-drop-down-circle"
+            class="text-white transition-all duration-300 delay-500 group-hover:text-lime-300">
+          </iconify-icon>
         </a>
+
       </div>
     </section>
 
@@ -167,7 +207,7 @@
 
 
         <!-- Center Title -->
-        <h1 class="absolute z-10 top-20 w-full left-1/2 -translate-x-1/2 text-6xl font-black
+        <h1 class="absolute z-10 top-20 w-full left-1/2 -translate-x-1/2 text-5xl
            text-lime-400
            text-center
            tracking-widest
@@ -175,7 +215,7 @@
            hover:tracking-[0.4em]
            hover:text-white
            hover:drop-shadow-[0_0_25px_#84cc16]
-           transition-all duration-500">
+           transition-all duration-500 [font-family:'Nosifer']">
           History & Legacy of Ben 10
         </h1>
 
@@ -193,11 +233,37 @@
             The franchise was rebooted in 2016 for a new generation. Since 2005, Ben 10 has grown into a global
             franchise with multiple series, films, games, and merchandise.</p>
 
-          <a href="#corecharacters" class="w-72 h-20 mt-20 rounded-full flex items-center justify-center 
-              text-2xl font-normal text-white bg-transparent border border-lime-600 hover:text-white hover:drop-shadow-[0_0_10px_lime]
-              transition duration-300 transform hover:scale-105">
-            Core Characters &nbsp; <iconify-icon icon="material-symbols:arrow-drop-down-circle"></iconify-icon>
+          <!-- Core Characters -->
+          <a href="#corecharacters" class="group w-72 h-20 mt-20 rounded-full flex items-center justify-center 
+          text-2xl font-normal border border-lime-600 hover:drop-shadow-[0_0_10px_lime]
+          transform hover:scale-105 transition duration-300">
+
+            <span class="text-lime-300 mr-1">Core</span>
+
+            <!-- CHARACTER TEXT -->
+            <span class="relative text-white">
+
+              <!-- Animated fill -->
+              <span class="absolute inset-0 
+                     bg-gradient-to-r from-lime-300 to-lime-300
+                     bg-[length:0%_100%] bg-left bg-no-repeat
+                     bg-clip-text text-transparent
+                     transition-all duration-500 ease-in-out
+                     group-hover:bg-[length:100%_100%]">
+                Characters
+              </span>
+
+              Characters
+            </span>
+
+            &nbsp;
+
+            <!--BOTTOM RIGHT ICON -->
+            <iconify-icon icon="material-symbols:arrow-drop-down-circle"
+              class="text-white transition-all duration-300 delay-500 group-hover:text-lime-300">
+            </iconify-icon>
           </a>
+
           <a class="absolute bottom-10 right-10" href="#"><iconify-icon icon="cuida:arrow-up-circle-outline" width="30"
               height="30" class="hover:scale-110 hover:drop-shadow-[0_0_10px_lime] w-8 h-8 text-lime-400"
               stroke="currentColor"></iconify-icon></a>
@@ -216,7 +282,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#84cc16]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
         Core Characters
       </h1>
 
@@ -238,7 +304,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman'] ">
             <a href="#corecharacters">Ben</a>
           </h2>
 
@@ -249,7 +315,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters1">Gwen</a>
           </h2>
 
@@ -260,7 +326,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters2">Kevin</a>
           </h2>
 
@@ -271,7 +337,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters3">Grandpa-Max</a>
           </h2>
 
@@ -282,7 +348,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters4">Rook</a>
           </h2>
 
@@ -293,7 +359,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters5">Vilgax</a>
           </h2>
 
@@ -304,7 +370,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters6">Azmuth</a>
           </h2>
         </div>
@@ -334,7 +400,7 @@
              hover:tracking-[0.4em]
              hover:text-white
              hover:drop-shadow-[0_0_25px_#84cc16]
-             transition-all duration-500">
+             transition-all duration-500 [font-family:'Goldman'] ">
             Ben Tennyson
           </h1>
           <p class="text-white p-10 text-center scale-y-150">Benjamin Kirby Tennyson, commonly known as Ben Tennyson, is
@@ -366,7 +432,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#84cc16]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
         Core Characters
       </h1>
 
@@ -388,7 +454,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters">Ben</a>
           </h2>
 
@@ -399,7 +465,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters1">Gwen</a>
           </h2>
 
@@ -410,7 +476,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters2">Kevin</a>
           </h2>
 
@@ -421,7 +487,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters3">Grandpa-Max</a>
           </h2>
 
@@ -432,7 +498,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters4">Rook</a>
           </h2>
 
@@ -443,7 +509,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters5">Vilgax</a>
           </h2>
 
@@ -454,7 +520,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters6">Azmuth</a>
           </h2>
         </div>
@@ -484,7 +550,7 @@
              hover:tracking-[0.4em]
              hover:text-white
              hover:drop-shadow-[0_0_25px_#84cc16]
-             transition-all duration-500">
+             transition-all duration-500 [font-family:'Goldman']">
             Gwen Tennyson
           </h1>
           <p class="text-white p-10 text-center scale-y-150">Gwen Tennyson, full name Gwendolyn Tennyson, is Ben’s
@@ -514,7 +580,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#84cc16]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
         Core Characters
       </h1>
 
@@ -536,7 +602,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters">Ben</a>
           </h2>
 
@@ -547,7 +613,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters1">Gwen</a>
           </h2>
 
@@ -558,7 +624,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters2">Kevin</a>
           </h2>
 
@@ -569,7 +635,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters3">Grandpa-Max</a>
           </h2>
 
@@ -580,7 +646,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters4">Rook</a>
           </h2>
 
@@ -591,7 +657,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters5">Vilgax</a>
           </h2>
 
@@ -602,7 +668,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters6">Azmuth</a>
           </h2>
         </div>
@@ -632,7 +698,7 @@
              hover:tracking-[0.4em]
              hover:text-white
              hover:drop-shadow-[0_0_25px_#84cc16]
-             transition-all duration-500">
+             transition-all duration-500 [font-family:'Goldman']">
             Kevin Levin
           </h1>
           <p class="text-white p-10 text-center scale-y-150">Kevin or fully Kevin Ethan Levin, originally an unstable
@@ -663,7 +729,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#84cc16]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
         Core Characters
       </h1>
 
@@ -685,7 +751,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters">Ben</a>
           </h2>
 
@@ -696,7 +762,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters1">Gwen</a>
           </h2>
 
@@ -707,7 +773,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters2">Kevin</a>
           </h2>
 
@@ -718,7 +784,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters3">Grandpa-Max</a>
           </h2>
 
@@ -729,7 +795,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters4">Rook</a>
           </h2>
 
@@ -740,7 +806,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters5">Vilgax</a>
           </h2>
 
@@ -751,7 +817,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters6">Azmuth</a>
           </h2>
         </div>
@@ -781,7 +847,7 @@
              hover:tracking-[0.4em]
              hover:text-white
              hover:drop-shadow-[0_0_25px_#84cc16]
-             transition-all duration-500">
+             transition-all duration-500 [font-family:'Goldman']">
             Grandpa-Max
           </h1>
           <p class="text-white p-10 text-center scale-y-150">Maxwell Tennyson, known as Grandpa Max, is the wise and
@@ -811,7 +877,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#84cc16]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
         Core Characters
       </h1>
 
@@ -833,7 +899,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters">Ben</a>
           </h2>
 
@@ -844,7 +910,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters1">Gwen</a>
           </h2>
 
@@ -855,7 +921,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters2">Kevin</a>
           </h2>
 
@@ -866,7 +932,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters3">Grandpa-Max</a>
           </h2>
 
@@ -877,7 +943,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters4">Rook</a>
           </h2>
 
@@ -888,7 +954,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters5">Vilgax</a>
           </h2>
 
@@ -899,7 +965,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters6">Azmuth</a>
           </h2>
         </div>
@@ -928,7 +994,7 @@
              hover:tracking-[0.4em]
              hover:text-white
              hover:drop-shadow-[0_0_25px_#84cc16]
-             transition-all duration-500">
+             transition-all duration-500 [font-family:'Goldman']">
             Rook Blonko
           </h1>
           <p class="text-white p-10 text-center scale-y-150">Rook Blonko, a skilled Revonnahgander, becomes Ben’s
@@ -959,7 +1025,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#84cc16]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
         Core Characters
       </h1>
 
@@ -981,7 +1047,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters">Ben</a>
           </h2>
 
@@ -992,7 +1058,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters1">Gwen</a>
           </h2>
 
@@ -1003,7 +1069,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters2">Kevin</a>
           </h2>
 
@@ -1014,7 +1080,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters3">Grandpa-Max</a>
           </h2>
 
@@ -1025,7 +1091,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters4">Rook</a>
           </h2>
 
@@ -1036,7 +1102,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters5">Vilgax</a>
           </h2>
 
@@ -1047,7 +1113,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters6">Azmuth</a>
           </h2>
         </div>
@@ -1077,7 +1143,7 @@
              hover:tracking-[0.4em]
              hover:text-white
              hover:drop-shadow-[0_0_25px_#84cc16]
-             transition-all duration-500">
+             transition-all duration-500 [font-family:'Goldman']">
             Vilgax
           </h1>
           <p class="text-white p-10 text-center scale-y-150">Vilgax, a ruthless Chimera Sui Generis warlord, is one of
@@ -1106,7 +1172,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#84cc16]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
         Core Characters
       </h1>
 
@@ -1128,7 +1194,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters">Ben</a>
           </h2>
 
@@ -1139,7 +1205,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters1">Gwen</a>
           </h2>
 
@@ -1150,7 +1216,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters2">Kevin</a>
           </h2>
 
@@ -1161,7 +1227,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters3">Grandpa-Max</a>
           </h2>
 
@@ -1172,7 +1238,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters4">Rook</a>
           </h2>
 
@@ -1183,7 +1249,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters5">Vilgax</a>
           </h2>
 
@@ -1194,7 +1260,7 @@
                hover:tracking-[0.4em]
                hover:text-white
                hover:drop-shadow-[0_0_25px_#10b981]
-               transition-all duration-500">
+               transition-all duration-500 [font-family:'Goldman']">
             <a href="#corecharacters6">Azmuth</a>
           </h2>
         </div>
@@ -1223,7 +1289,7 @@
              hover:tracking-[0.4em]
              hover:text-white
              hover:drop-shadow-[0_0_25px_#84cc16]
-             transition-all duration-500">
+             transition-all duration-500 [font-family:'Goldman']">
             Azmuth
           </h1>
           <p class="text-white p-10 text-center scale-y-150">Azmuth, the brilliant Galvan scientist, is the creator of
@@ -1265,7 +1331,8 @@
               src="Image/instagramlogonew.png" alt="Instagram"></a>
         </li>
       </ul>
-      <h1 class="text-green-100 ml-6"> Built & Designed by Ankit-[AS] © 2026</h1>
+      <h1 class="text-green-100 ml-1.5 text-lg [font-family:'Agdasima',system-ui]"> Built & Designed by Ankit-[AS] ©
+        2026</h1>
       <h1 class="text-green-600 text-sm ml-6"> Developer by <iconify-icon icon="material-symbols-light:heart-arrow"
           width="20" height="20" class="relative top-1"></iconify-icon></h1>
 
